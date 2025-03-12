@@ -1,25 +1,51 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import AppRouter from "./AppRouter";
 import './App.css';
+import SideNav from "./SideNav";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="mainPage">
+       <div>
+        <SideNav/>
+       </div>
+       
+      </div>
+   
   );
 }
 
 export default App;
+/**
+ * 
+ * 
+ <aside className="w-64 bg-white shadow-md p-4 hidden md:block">
+ <nav>
+   <ul className="space-y-2">
+     <li>
+       <Link to="/" className="block p-3 rounded hover:bg-gray-200">
+         Home
+       </Link>
+     </li>
+     <li>
+       <Link to="/accounts" className="block p-3 rounded hover:bg-gray-200">
+         Accounts
+       </Link>
+     </li>
+     <li>
+       <Link to="/chrono" className="block p-3 rounded hover:bg-gray-200">
+         Chrono
+       </Link>
+     </li>
+   </ul>
+ </nav>
+</aside>
+
+{/* Main Content 
+<main className="flex-1 p-6">
+ <AppRouter />
+</main>
+
+ */
